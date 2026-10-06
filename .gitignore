@@ -1,0 +1,13 @@
+# Godot 4+
+.godot/
+/android/
+
+# Exports and raw art stay out of the repo
+/exports/
+/raw/
+*.psd
+*.kra
+
+# Operating system junk
+Thumbs.db
+.DS_Store
