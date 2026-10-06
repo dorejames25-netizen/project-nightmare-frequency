@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/tunnel/tunnel_v1.png" id="1_bg"]
+
+[node name="Tunnel" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(688, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bg")
+
+[node name="WalkArea" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.24, 1, 0.55, 0.3)
+polygon = PackedVector2Array(0.0, 768.6, 0.0, 638.9, 255.5, 589.7, 452.1, 579.9, 776.5, 461.9, 791.2, 481.6, 756.8, 688.0, 727.3, 768.6)
+
+[node name="Blockers" type="Node2D" parent="."]
+visible = false
+
+[node name="Cart" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(990.7, 461.9, 1140.1, 461.9, 1140.1, 560.2, 997.6, 545.5)
+
+[node name="Debris" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(1095.9, 589.7, 1312.1, 629.0, 1307.2, 688.0, 1091.0, 638.9)
+
+[node name="WalkBehind" type="Node2D" parent="."]
+visible = false
+
+[node name="Pier" type="Polygon2D" parent="WalkBehind"]
+color = Color(1, 0.24, 0.78, 0.3)
+polygon = PackedVector2Array(257.5, 373.5, 452.1, 373.5, 450.1, 589.7, 260.5, 592.7)
+
+[node name="AnimationSlots" type="Node2D" parent="."]
+visible = false
+
+[node name="WallPanel" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(137.6, 314.5, 240.8, 319.4, 240.8, 398.1, 137.6, 398.1)
+
+[node name="BlackScreen" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(621.2, 334.2, 705.7, 334.2, 705.7, 398.1, 621.2, 398.1)
+
+[node name="PanelR" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1159.8, 353.8, 1218.7, 351.9, 1218.7, 407.9, 1159.8, 407.9)
+
+[node name="VaultShaft" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(776.5, 19.7, 919.0, 19.7, 919.0, 196.6, 776.5, 196.6)
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(469.9, 719.5)
+
+[node name="Exits" type="Node2D" parent="."]
+
+[node name="Gate" type="Marker2D" parent="Exits"]
+position = Vector2(850.2, 461.9)
+metadata/target = "locked"
+
+[node name="Ladder" type="Marker2D" parent="Exits"]
+position = Vector2(594.6, 486.5)
+metadata/target = "service_corridor"
+
+[node name="Platform" type="Marker2D" parent="Exits"]
+position = Vector2(147.4, 768.6)
+metadata/target = "metro_platform"

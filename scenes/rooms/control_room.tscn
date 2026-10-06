@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/control_room/control_room_v1.png" id="1_bg"]
+
+[node name="ControlRoom" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(688, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bg")
+
+[node name="WalkArea" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.24, 1, 0.55, 0.3)
+polygon = PackedVector2Array(127.8, 768.6, 132.7, 688.0, 235.9, 638.9, 373.5, 609.4, 864.9, 607.4, 1002.5, 629.0, 1159.8, 688.0, 1248.2, 768.6)
+
+[node name="Blockers" type="Node2D" parent="."]
+visible = false
+
+[node name="RightConsoles" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(1012.3, 550.4, 1376.0, 530.7, 1376.0, 768.6, 1248.2, 768.6, 1159.8, 678.2, 1022.2, 629.0)
+
+[node name="BackConsoles" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(407.9, 535.7, 855.1, 535.7, 855.1, 604.5, 407.9, 604.5)
+
+[node name="FloorPit" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(412.8, 678.2, 511.1, 633.9, 884.6, 633.9, 968.1, 678.2, 884.6, 709.6, 491.4, 709.6)
+
+[node name="WalkBehind" type="Node2D" parent="."]
+visible = false
+
+[node name="LeftColumn" type="Polygon2D" parent="WalkBehind"]
+color = Color(1, 0.24, 0.78, 0.3)
+polygon = PackedVector2Array(0.0, 0.0, 172.0, 0.0, 181.8, 688.0, 122.9, 768.6, 0.0, 768.6)
+
+[node name="AnimationSlots" type="Node2D" parent="."]
+visible = false
+
+[node name="MonitorWall" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(407.9, 348.9, 860.0, 348.9, 860.0, 535.7, 407.9, 535.7)
+
+[node name="ScreenL" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(233.9, 240.8, 355.8, 265.4, 353.8, 309.6, 233.9, 304.7)
+
+[node name="ScreenR1" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1081.1, 221.1, 1213.8, 201.5, 1223.7, 285.0, 1086.1, 324.3)
+
+[node name="ScreenR2" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1105.7, 378.4, 1248.2, 378.4, 1258.1, 496.3, 1110.6, 496.3)
+
+[node name="ScreenFarR" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1307.2, 324.3, 1376.0, 324.3, 1376.0, 491.4, 1312.1, 481.6)
+
+[node name="Oculus" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(491.4, 0.0, 909.1, 0.0, 909.1, 98.3, 491.4, 98.3)
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(643.2, 719.5)
+
+[node name="Exits" type="Node2D" parent="."]
+
+[node name="Door" type="Marker2D" parent="Exits"]
+position = Vector2(260.5, 629.0)
+metadata/target = "service_corridor"
+
+[node name="StairsUp" type="Marker2D" parent="Exits"]
+position = Vector2(953.4, 609.4)
+metadata/target = "locked"

@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/station_concourse/station_concourse_v1.png" id="1_bg"]
+
+[node name="StationConcourse" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(688, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bg")
+
+[node name="WalkArea" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.24, 1, 0.55, 0.3)
+polygon = PackedVector2Array(373.5, 768.6, 378.4, 633.9, 461.9, 601.5, 589.7, 587.7, 855.1, 587.7, 869.8, 614.3, 1091.0, 636.9, 1164.7, 678.2, 1376.0, 756.8, 1376.0, 768.6)
+
+[node name="Blockers" type="Node2D" parent="."]
+visible = false
+
+[node name="Barriers" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(864.9, 520.9, 1159.8, 511.1, 1159.8, 629.0, 1091.0, 633.9, 864.9, 609.4)
+
+[node name="Booth" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(1140.1, 285.0, 1376.0, 285.0, 1376.0, 678.2, 1159.8, 535.7, 1140.1, 535.7)
+
+[node name="WalkBehind" type="Node2D" parent="."]
+visible = false
+
+[node name="LeftColumn" type="Polygon2D" parent="WalkBehind"]
+color = Color(1, 0.24, 0.78, 0.3)
+polygon = PackedVector2Array(117.9, 0.0, 378.4, 0.0, 378.4, 732.2, 93.4, 732.2)
+
+[node name="MidColumn" type="Polygon2D" parent="WalkBehind"]
+color = Color(1, 0.24, 0.78, 0.3)
+polygon = PackedVector2Array(358.7, 260.5, 439.3, 260.5, 439.3, 629.0, 358.7, 624.1)
+
+[node name="AnimationSlots" type="Node2D" parent="."]
+visible = false
+
+[node name="Screen1" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(476.7, 312.5, 584.8, 314.5, 584.8, 375.5, 476.7, 375.5)
+
+[node name="Screen2" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(604.5, 314.5, 732.2, 316.5, 732.2, 378.4, 604.5, 378.4)
+
+[node name="Screen3" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(748.9, 322.4, 847.2, 324.3, 847.2, 381.3, 748.9, 381.3)
+
+[node name="Shaft" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(599.5, 137.6, 717.5, 137.6, 717.5, 294.9, 599.5, 294.9)
+
+[node name="PanelR" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1120.5, 181.8, 1238.4, 172.0, 1238.4, 280.1, 1120.5, 288.0)
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(853.6, 719.5)
+
+[node name="Exits" type="Node2D" parent="."]
+
+[node name="Stairs" type="Marker2D" parent="Exits"]
+position = Vector2(513.5, 579.9)
+metadata/target = "metro_platform"
+
+[node name="StreetDoors" type="Marker2D" parent="Exits"]
+position = Vector2(781.4, 584.8)
+metadata/target = "street_night"
+
+[node name="Service" type="Marker2D" parent="Exits"]
+position = Vector2(953.4, 516.0)
+metadata/target = "service_corridor"

@@ -1,0 +1,219 @@
+{
+  "start_room": "metro_platform",
+  "rooms": [
+    {
+      "id": "metro_platform",
+      "title": "Metro platform",
+      "scene": "res://scenes/rooms/metro_platform.tscn",
+      "plate": "res://assets/backgrounds/metro_platform/metro_platform_v2.png",
+      "key_colour": "magenta",
+      "exits": [
+        {
+          "id": "stairs",
+          "to": "station_concourse",
+          "rect": [
+            840,
+            403,
+            958,
+            570
+          ]
+        },
+        {
+          "id": "tunnel",
+          "to": "tunnel",
+          "rect": [
+            1017,
+            408,
+            1214,
+            595
+          ]
+        }
+      ]
+    },
+    {
+      "id": "station_concourse",
+      "title": "Station concourse",
+      "scene": "res://scenes/rooms/station_concourse.tscn",
+      "plate": "res://assets/backgrounds/station_concourse/station_concourse_v1.png",
+      "key_colour": "emerald green",
+      "exits": [
+        {
+          "id": "stairs",
+          "to": "metro_platform",
+          "rect": [
+            447,
+            388,
+            580,
+            580
+          ]
+        },
+        {
+          "id": "street_doors",
+          "to": "street_night",
+          "rect": [
+            722,
+            403,
+            840,
+            585
+          ]
+        },
+        {
+          "id": "service",
+          "to": "service_corridor",
+          "rect": [
+            914,
+            373,
+            993,
+            516
+          ]
+        }
+      ]
+    },
+    {
+      "id": "street_night",
+      "title": "Street at night",
+      "scene": "res://scenes/rooms/street_night.tscn",
+      "plate": "res://assets/backgrounds/street_night/street_night_v1.png",
+      "key_colour": "teal",
+      "exits": [
+        {
+          "id": "alley",
+          "to": null,
+          "rect": [
+            157,
+            128,
+            393,
+            590
+          ]
+        },
+        {
+          "id": "right_doorway",
+          "to": null,
+          "rect": [
+            1194,
+            359,
+            1327,
+            629
+          ]
+        },
+        {
+          "id": "tower_district",
+          "to": null,
+          "rect": [
+            717,
+            310,
+            835,
+            511
+          ]
+        },
+        {
+          "id": "station",
+          "to": "station_concourse",
+          "rect": [
+            491,
+            688,
+            885,
+            769
+          ]
+        }
+      ]
+    },
+    {
+      "id": "service_corridor",
+      "title": "Service corridor",
+      "scene": "res://scenes/rooms/service_corridor.tscn",
+      "plate": "res://assets/backgrounds/service_corridor/service_corridor_v1.png",
+      "key_colour": "amber (modern LED) with magenta",
+      "exits": [
+        {
+          "id": "control_door",
+          "to": "control_room",
+          "rect": [
+            739,
+            339,
+            870,
+            491
+          ]
+        },
+        {
+          "id": "side_door",
+          "to": "station_concourse",
+          "rect": [
+            378,
+            285,
+            462,
+            639
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control_room",
+      "title": "Control room",
+      "scene": "res://scenes/rooms/control_room.tscn",
+      "plate": "res://assets/backgrounds/control_room/control_room_v1.png",
+      "key_colour": "cold blue with magenta",
+      "exits": [
+        {
+          "id": "door",
+          "to": "service_corridor",
+          "rect": [
+            197,
+            373,
+            324,
+            629
+          ]
+        },
+        {
+          "id": "stairs_up",
+          "to": null,
+          "rect": [
+            865,
+            393,
+            1042,
+            609
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tunnel",
+      "title": "The tunnel",
+      "scene": "res://scenes/rooms/tunnel.tscn",
+      "plate": "res://assets/backgrounds/tunnel/tunnel_v1.png",
+      "key_colour": "magenta fog with green",
+      "exits": [
+        {
+          "id": "gate",
+          "to": null,
+          "rect": [
+            781,
+            329,
+            919,
+            462
+          ]
+        },
+        {
+          "id": "ladder",
+          "to": "service_corridor",
+          "rect": [
+            575,
+            39,
+            614,
+            487
+          ]
+        },
+        {
+          "id": "platform",
+          "to": "metro_platform",
+          "rect": [
+            0,
+            688,
+            295,
+            769
+          ]
+        }
+      ]
+    }
+  ]
+}

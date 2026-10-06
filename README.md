@@ -20,7 +20,7 @@ Only finished, game-ready assets are copied into this one.
 | `autoload/` | Global singletons (game state, scene changer, audio) |
 | `shaders/` | `.gdshader` files |
 | `resources/` | `.tres` / `.res` resources |
-| `data/rooms/` | Room data, such as exits and spawn points |
+| `data/rooms/` | `rooms.json`: room list and how the exits connect |
 | `assets/backgrounds/<room>/` | Final background plate and any cut-out layers for each room |
 | `assets/sprites/` | `player`, `enemies`, `npcs` |
 | `assets/fx/` | Effect art, including `glyph_rain` |
