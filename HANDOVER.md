@@ -2,7 +2,7 @@
 
 Update this file at the end of every work session, and any time something big changes. If a session crashes or runs out of context, the next session starts here.
 
-**Last updated:** 2026-10-06 (evening)
+**Last updated:** 2026-10-06 22:10
 **Owner:** James Dore
 
 ## 1. What this is
@@ -45,7 +45,14 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 - Done: both repos structured and licensed, six plates plus plans made, six Godot scenes generated, world guide updated (Draft 2).
 - Plates are NOT in either repo yet. Zips were given to James: `dropzone_art_part1.zip`, `dropzone_art_part2.zip` (into `dropzone-`), `game_assets_update.zip` (into the game repo).
 
+## 6b. Latest state (22:10)
+- PowerShell crashed on James's PC. Local repos at `C:\GitHub\dropzone-` and `C:\GitHub\project-nightmare-frequency` may hold uncommitted or unpushed work. Check `git status` and `git log origin/main..HEAD` before anything else.
+- New artwork and plans are now in the `dropzone-` folder on James's PC. Plans came as single images. Zips are still in there; leave them. They move to an external backup when local work is finished, then the online repo gets updated.
+- Cloud session cannot see his PC. Work continues in a Claude desktop task linked to his computer.
+- `HANDOVER.md` is pushed to main in both repos.
+
 ## 7. Next steps
+0. Read every folder in `C:\GitHub\dropzone-` (zips included), check image sizes (plates should be 2752x1536), compare with this file, and report what is new.
 1. James extracts the zips, then pull, add, commit, push in each repo.
 2. Add `story/Nightmare_Frequency_World_Guide.pdf` and style references (no real faces) by hand.
 3. Open Godot and tune the first-pass walk polygons.
@@ -56,4 +63,5 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 8. Set repos private before real art/story is pushed.
 
 ## 8. Session log
+- 2026-10-06 22:10: handover updated after PowerShell crash; session moved to desktop link.
 - 2026-10-06: modern-lighting redo of all six plates, Godot scenes and rooms.json generated, zips delivered. Session crashed; this handover added.
