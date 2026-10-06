@@ -51,6 +51,11 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 - Cloud session cannot see his PC. Work continues in a Claude desktop task linked to his computer.
 - `HANDOVER.md` is pushed to main in both repos.
 
+## 6c. Decisions (23:15)
+- Reference photos are for SCENES only, and must contain no people. Photos are James's own (any family photos need permission). Use as Firefly Composition/Structure reference at about 40-60 strength, with 2-3 of the six plates as Style reference at about 80-100. Plates remain the style benchmark; James decides whether to revert if output drifts. Exports are versioned (room_v01, v02) and never overwritten.
+- Characters and sprites are Codex Astra's job (ChatGPT Codex), not Claude's. Claude only checks and files the results and keeps the docs. Do the scene shots first, characters after.
+- Photos with real faces stay out of the repos.
+
 ## 7. Next steps
 0. Read every folder in `C:\GitHub\dropzone-` (zips included), check image sizes (plates should be 2752x1536), compare with this file, and report what is new.
 1. James extracts the zips, then pull, add, commit, push in each repo.
@@ -63,5 +68,6 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 8. Set repos private before real art/story is pushed.
 
 ## 8. Session log
+- 2026-10-06 23:15: scene-photo workflow decided; characters go to Codex Astra.
 - 2026-10-06 22:10: handover updated after PowerShell crash; session moved to desktop link.
 - 2026-10-06: modern-lighting redo of all six plates, Godot scenes and rooms.json generated, zips delivered. Session crashed; this handover added.
