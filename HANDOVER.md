@@ -32,11 +32,11 @@ The Makers made humans as a hybrid workforce in the age of the Ancients. An exti
 | Room | Plate | Key colour | Scene |
 |---|---|---|---|
 | metro_platform | v2 | magenta | boundaries measured (round 2): floor, 5 column bases, bench, 5 walk-behind cut-outs, exits, depth rule. See docs/SUBWAY_BOUNDARIES.md in the game repo. Untested in Godot |
-| station_concourse | v1 | emerald | built, polygons untested |
-| street_night | v1 | teal | built, polygons untested |
-| service_corridor | v1 | amber + magenta | built, polygons untested |
-| control_room | v1 | cold blue + magenta | built, floor disc undecided (pit / hologram / lift) |
-| tunnel | v1 | magenta fog + green | built, polygons untested |
+| station_concourse | v1 | emerald | boundaries measured (round 2), untested in Godot |
+| street_night | v1 | teal | boundaries measured (round 2), untested in Godot |
+| service_corridor | v1 | amber + magenta | boundaries measured (round 2), untested in Godot |
+| control_room | v1 | cold blue + magenta | boundaries measured (round 2); floor disc still blocked, undecided (pit / hologram / lift) |
+| tunnel | v1 | magenta fog + green | boundaries measured (round 2), untested in Godot |
 
 Not built yet: upper control level, neon-door lobby / tower district.
 Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
@@ -68,6 +68,7 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 8. Set repos private before real art/story is pushed.
 
 ## 8. Session log
+- 2026-10-07: all six rooms now have measured boundaries (scenes, exit zones, depth rule, cut-outs). Notes in game repo docs/SUBWAY_BOUNDARIES.md and docs/BOUNDARIES_NOTES.md. Needs from PC via LFS: game_walk_behind_cutouts_all.zip (into game repo root) and dropzone_plans_round2.zip (into dropzone- root). Decisions open: control-room disc, concourse 'service' opening, street 'alley' zone, tunnel platform exit, player scale cap.
 - 2026-10-07: subway (metro platform) boundaries redone on a measured grid; new scene, cut-outs and notes. Cut-out PNGs (assets/backgrounds/metro_platform/behind/) and metro_platform_v2_plan_r2.png still need adding from James's PC via LFS. Other five rooms still first-pass.
 - 2026-10-06 23:15: scene-photo workflow decided; characters go to Codex Astra.
 - 2026-10-06 22:10: handover updated after PowerShell crash; session moved to desktop link.
