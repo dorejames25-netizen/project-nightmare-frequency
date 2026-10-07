@@ -31,7 +31,7 @@ The Makers made humans as a hybrid workforce in the age of the Ancients. An exti
 ## 5. Rooms (status)
 | Room | Plate | Key colour | Scene |
 |---|---|---|---|
-| metro_platform | v2 | magenta | built, polygons untested |
+| metro_platform | v2 | magenta | boundaries measured (round 2): floor, 5 column bases, bench, 5 walk-behind cut-outs, exits, depth rule. See docs/SUBWAY_BOUNDARIES.md in the game repo. Untested in Godot |
 | station_concourse | v1 | emerald | built, polygons untested |
 | street_night | v1 | teal | built, polygons untested |
 | service_corridor | v1 | amber + magenta | built, polygons untested |
@@ -68,6 +68,7 @@ Connections are in `docs/ROOM_LAYOUT.md` and `data/rooms/rooms.json`.
 8. Set repos private before real art/story is pushed.
 
 ## 8. Session log
+- 2026-10-07: subway (metro platform) boundaries redone on a measured grid; new scene, cut-outs and notes. Cut-out PNGs (assets/backgrounds/metro_platform/behind/) and metro_platform_v2_plan_r2.png still need adding from James's PC via LFS. Other five rooms still first-pass.
 - 2026-10-06 23:15: scene-photo workflow decided; characters go to Codex Astra.
 - 2026-10-06 22:10: handover updated after PowerShell crash; session moved to desktop link.
 - 2026-10-06: modern-lighting redo of all six plates, Godot scenes and rooms.json generated, zips delivered. Session crashed; this handover added.
