@@ -48,33 +48,38 @@
      "id": "stairs",
      "to": "metro_platform",
      "rect": [
-      447,
-      388,
-      580,
-      580
+      440,
+      585,
+      592,
+      625
      ]
     },
     {
      "id": "street_doors",
      "to": "street_night",
      "rect": [
-      722,
-      403,
-      840,
-      585
+      695,
+      585,
+      860,
+      626
      ]
     },
     {
      "id": "service",
      "to": "service_corridor",
      "rect": [
-      914,
-      373,
-      993,
-      516
+      600,
+      585,
+      709,
+      623
      ]
     }
-   ]
+   ],
+   "depth": {
+    "horizon_y": 516.7,
+    "person_height_per_px": 1.71,
+    "note": "player height in scene px = person_height_per_px * (feet_y - horizon_y)"
+   }
   },
   {
    "id": "street_night",
@@ -87,43 +92,48 @@
      "id": "alley",
      "to": null,
      "rect": [
-      157,
-      128,
-      393,
-      590
+      695,
+      517,
+      765,
+      555
      ]
     },
     {
      "id": "right_doorway",
      "to": null,
      "rect": [
-      1194,
-      359,
-      1327,
-      629
+      1170,
+      618,
+      1242,
+      647
      ]
     },
     {
      "id": "tower_district",
      "to": null,
      "rect": [
-      717,
-      310,
-      835,
-      511
+      1242,
+      621,
+      1326,
+      669
      ]
     },
     {
      "id": "station",
      "to": "station_concourse",
      "rect": [
-      491,
-      688,
-      885,
-      769
+      440,
+      729,
+      1073,
+      768
      ]
     }
-   ]
+   ],
+   "depth": {
+    "horizon_y": 489.9,
+    "person_height_per_px": 1.6457,
+    "note": "player height in scene px = person_height_per_px * (feet_y - horizon_y)"
+   }
   },
   {
    "id": "service_corridor",
@@ -136,23 +146,28 @@
      "id": "control_door",
      "to": "control_room",
      "rect": [
-      739,
-      339,
-      870,
-      491
+      731,
+      497,
+      868,
+      524
      ]
     },
     {
      "id": "side_door",
      "to": "station_concourse",
      "rect": [
-      378,
-      285,
-      462,
-      639
+      383,
+      623,
+      454,
+      671
      ]
     }
-   ]
+   ],
+   "depth": {
+    "horizon_y": 402.5,
+    "person_height_per_px": 1.3483,
+    "note": "player height in scene px = person_height_per_px * (feet_y - horizon_y)"
+   }
   },
   {
    "id": "control_room",
@@ -165,23 +180,28 @@
      "id": "door",
      "to": "service_corridor",
      "rect": [
-      197,
-      373,
-      324,
-      629
+      200,
+      630,
+      311,
+      657
      ]
     },
     {
      "id": "stairs_up",
      "to": null,
      "rect": [
-      865,
-      393,
-      1042,
-      609
+      875,
+      618,
+      1026,
+      640
      ]
     }
-   ]
+   ],
+   "depth": {
+    "horizon_y": 515.3,
+    "person_height_per_px": 1.42,
+    "note": "player height in scene px = person_height_per_px * (feet_y - horizon_y)"
+   }
   },
   {
    "id": "tunnel",
@@ -194,20 +214,20 @@
      "id": "gate",
      "to": null,
      "rect": [
-      781,
-      329,
-      919,
-      462
+      660,
+      461,
+      783,
+      523
      ]
     },
     {
      "id": "ladder",
      "to": "service_corridor",
      "rect": [
-      575,
-      39,
-      614,
-      487
+      544,
+      486,
+      647,
+      524
      ]
     },
     {
@@ -215,12 +235,17 @@
      "to": "metro_platform",
      "rect": [
       0,
-      688,
-      295,
-      769
+      585,
+      55,
+      757
      ]
     }
-   ]
+   ],
+   "depth": {
+    "horizon_y": 416.2,
+    "person_height_per_px": 2.09,
+    "note": "player height in scene px = person_height_per_px * (feet_y - horizon_y)"
+   }
   }
  ]
 }

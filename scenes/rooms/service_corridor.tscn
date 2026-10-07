@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/backgrounds/service_corridor/service_corridor_v1.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/service_corridor/behind/service_corridor_behind_cart.png" id="2_cart"]
 
 [node name="ServiceCorridor" type="Node2D"]
 
@@ -12,54 +13,97 @@ texture = ExtResource("1_bg")
 [node name="WalkArea" type="Polygon2D" parent="."]
 visible = false
 color = Color(0.24, 1, 0.55, 0.3)
-polygon = PackedVector2Array(314.5, 768.6, 373.5, 629.0, 461.9, 599.5, 530.7, 579.9, 629.0, 530.7, 707.7, 491.4, 864.9, 491.4, 923.9, 550.4, 973.0, 589.7, 992.7, 629.0, 982.9, 768.6)
+polygon = PackedVector2Array(297.2, 767.8, 297.2, 734.8, 337.1, 697.6, 377.0, 694.9, 380.5, 623.3, 443.8, 616.4, 450.6, 614.4, 491.9, 612.3, 505.7, 600.6, 550.4, 589.6, 584.8, 565.5, 619.2, 543.5, 653.6, 516.0, 688.0, 502.2, 729.3, 489.9, 872.4, 489.9, 894.4, 531.1, 913.0, 565.5, 928.8, 586.2, 942.6, 599.9, 966.6, 620.6, 989.3, 650.2, 1063.0, 722.4, 1142.1, 715.5, 1145.5, 767.8)
 
 [node name="Blockers" type="Node2D" parent="."]
 visible = false
 
-[node name="CratesMid" type="Polygon2D" parent="Blockers"]
+[node name="CrateStackL" type="Polygon2D" parent="Blockers"]
 color = Color(1, 0.78, 0.16, 0.3)
-polygon = PackedVector2Array(894.4, 432.5, 1022.2, 422.6, 1022.2, 589.7, 904.2, 579.9)
+polygon = PackedVector2Array(894.4, 529.8, 913.0, 565.5, 928.8, 586.2, 941.2, 599.9, 966.6, 620.6, 1032.0, 615.8, 1032.0, 522.9)
 
-[node name="CartCrates" type="Polygon2D" parent="Blockers"]
+[node name="CartBase" type="Polygon2D" parent="Blockers"]
 color = Color(1, 0.78, 0.16, 0.3)
-polygon = PackedVector2Array(982.9, 496.3, 1376.0, 520.9, 1376.0, 768.6, 1140.1, 768.6, 1140.1, 717.5, 992.7, 678.2)
+polygon = PackedVector2Array(989.3, 650.2, 1011.4, 612.3, 1169.6, 584.8, 1171.0, 636.4, 1142.1, 694.9, 1063.0, 722.4)
 
-[node name="WalkBehind" type="Node2D" parent="."]
-visible = false
+[node name="CratesRight" type="Polygon2D" parent="Blockers"]
+color = Color(1, 0.78, 0.16, 0.3)
+polygon = PackedVector2Array(1138.6, 627.5, 1173.0, 636.4, 1245.3, 672.9, 1376.0, 677.7, 1376.0, 767.8, 1145.5, 767.8)
 
-[node name="PipesArch" type="Polygon2D" parent="WalkBehind"]
-color = Color(1, 0.24, 0.78, 0.3)
-polygon = PackedVector2Array(0.0, 196.6, 294.9, 196.6, 304.7, 768.6, 0.0, 768.6)
+[node name="Actors" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="CartFront" type="Node2D" parent="Actors"]
+position = Vector2(0, 681.1)
+
+[node name="Sprite" type="Sprite2D" parent="Actors/CartFront"]
+position = Vector2(985.0, -216.1)
+scale = Vector2(0.5, 0.5)
+centered = false
+texture = ExtResource("2_cart")
 
 [node name="AnimationSlots" type="Node2D" parent="."]
 visible = false
 
-[node name="Screen" type="Polygon2D" parent="AnimationSlots"]
+[node name="ScreenL" type="Polygon2D" parent="AnimationSlots"]
 color = Color(0.24, 0.86, 1, 0.3)
-polygon = PackedVector2Array(1115.5, 280.1, 1272.8, 270.3, 1272.8, 457.0, 1115.5, 447.2)
+polygon = PackedVector2Array(565.5, 357.8, 620.6, 366.0, 619.2, 436.2, 565.5, 448.6)
 
-[node name="CeilingPanel" type="Polygon2D" parent="AnimationSlots"]
+[node name="ScreenR" type="Polygon2D" parent="AnimationSlots"]
 color = Color(0.24, 0.86, 1, 0.3)
-polygon = PackedVector2Array(963.2, 103.2, 1169.6, 14.7, 1184.3, 152.3, 1032.0, 221.1)
+polygon = PackedVector2Array(982.5, 362.6, 1032.0, 354.3, 1032.0, 440.3, 983.8, 427.9)
 
-[node name="PanelL" type="Polygon2D" parent="AnimationSlots"]
+[node name="BigMonitor" type="Polygon2D" parent="AnimationSlots"]
 color = Color(0.24, 0.86, 1, 0.3)
-polygon = PackedVector2Array(560.2, 358.7, 621.2, 358.7, 621.2, 442.3, 560.2, 442.3)
+polygon = PackedVector2Array(1118.0, 282.1, 1259.0, 276.6, 1260.4, 440.3, 1122.8, 433.4)
 
-[node name="PanelR" type="Polygon2D" parent="AnimationSlots"]
+[node name="DoorGlow" type="Polygon2D" parent="AnimationSlots"]
 color = Color(0.24, 0.86, 1, 0.3)
-polygon = PackedVector2Array(980.9, 353.8, 1036.9, 358.7, 1036.9, 447.2, 980.9, 442.3)
+polygon = PackedVector2Array(744.4, 356.4, 861.4, 357.8, 861.4, 487.1, 744.4, 487.1)
+
+[node name="LightMain" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(650.2, 63.3, 925.4, 46.8, 918.5, 70.2, 661.9, 88.1)
+
+[node name="LightMid" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(723.8, 214.7, 870.3, 214.7, 866.9, 225.7, 729.3, 225.7)
+
+[node name="SkylightVoid" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(1032.0, 20.6, 1169.6, 103.2, 1114.6, 206.4, 963.2, 123.8)
+
+[node name="SteamL" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(512.6, 597.2, 543.5, 584.8, 584.8, 550.4, 619.2, 526.3, 660.5, 505.7, 715.5, 485.0, 732.7, 489.9, 715.5, 522.9, 674.2, 550.4, 619.2, 584.8, 550.4, 608.9)
+
+[node name="SteamR1" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(891.0, 443.8, 918.5, 440.3, 918.5, 498.8, 891.0, 502.2)
+
+[node name="SteamR2" type="Polygon2D" parent="AnimationSlots"]
+color = Color(0.24, 0.86, 1, 0.3)
+polygon = PackedVector2Array(915.0, 571.0, 980.4, 571.0, 983.8, 636.4, 918.5, 636.4)
 
 [node name="PlayerStart" type="Marker2D" parent="."]
-position = Vector2(705.0, 719.5)
+position = Vector2(688.0, 715.5)
+
+[node name="Depth" type="Node2D" parent="."]
+metadata/horizon_y = 402.5
+metadata/person_height_per_px = 1.3483
 
 [node name="Exits" type="Node2D" parent="."]
 
-[node name="ControlDoor" type="Marker2D" parent="Exits"]
-position = Vector2(804.5, 491.4)
+[node name="ControlDoorZone" type="Polygon2D" parent="Exits"]
+visible = false
+color = Color(1, 1, 1, 0.3)
+polygon = PackedVector2Array(739.6, 496.7, 866.9, 496.7, 868.3, 524.3, 730.7, 524.3)
 metadata/target = "control_room"
+metadata/arrive = Vector2(801.5, 512.6)
 
-[node name="SideDoor" type="Marker2D" parent="Exits"]
-position = Vector2(420.2, 638.9)
+[node name="SideDoorZone" type="Polygon2D" parent="Exits"]
+visible = false
+color = Color(1, 1, 1, 0.3)
+polygon = PackedVector2Array(382.5, 633.0, 447.2, 622.6, 454.1, 660.5, 385.3, 670.8)
 metadata/target = "station_concourse"
+metadata/arrive = Vector2(419.7, 652.2)

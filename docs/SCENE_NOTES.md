@@ -27,7 +27,8 @@ All helper nodes are hidden in game. Turn on `visible` in the editor to see them
 | `PlayerStart` | Spawn point |
 | `Exits/*` | Marker at the foot of each exit, with `metadata/target` set to the room it leads to (or `locked`) |
 
-All polygons are first-pass estimates drawn by eye on the plates. They have not been tested in Godot, so expect to nudge points in the editor.
+All six rooms now have measured boundaries (round 2): floor, blockers, walk-behind cut-outs, animation slots, exit zones and a depth rule. Details are in `SUBWAY_BOUNDARIES.md` and `BOUNDARIES_NOTES.md`. They have not been tested in Godot yet, so expect to nudge points in the editor.
+Player nodes go under `Actors` (y-sort). Walk-behind cut-outs are PNGs in `assets/backgrounds/<room>/behind/` and are added from the PC through Git LFS.
 
 ## Known art notes
 
