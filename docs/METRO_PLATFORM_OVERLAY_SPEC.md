@@ -39,20 +39,25 @@ then pin its corners to the slot's corners (the left-wall slots are in perspecti
 
 Glyph-rain source frames are 1672 x 941 (`dropzone-/art/fx/glyph_rain/`, four frames). They are big enough for every slot.
 
-## Suggested extra slots (not measured, not in the scene yet)
+## Extra slots (measured 2026-10-07, in the scene)
 
-Seen on the plate. Add only the ones wanted.
+Checked by drawing them over the plate. Boxes are the outer bounds; the scene holds the exact shape.
 
-| Slot | Where | Idea |
-| --- | --- | --- |
-| `TunnelMouth` | Dark tunnel arch, right | Headlight glow, something moving in the dark |
-| `StairsNeon` | Magenta and teal neon round the stair arch | Flicker |
-| `RingLights` | Two magenta ceiling rings | Slow pulse |
-| `CageLights` | Three caged lamps and their light cones, right | Flicker, swing |
-| `TubeLights` | Teal and magenta tubes under the wall brackets | Buzz flicker |
-| `FloorFog` | Fog along the back of the floor and the platform edge | Drifting fog, foreground layer |
-| `FloorReflections` | Wet floor | Faint shimmer matching the sign |
+| Slot | What it is on the plate | Box, plate px (x, y) | Box size | Idea |
+| --- | --- | --- | --- | --- |
+| `TunnelMouth` | Dark tunnel arch, right | 2040, 812 | 336 x 412 | Headlight glow, something moving in the dark |
+| `StairsNeon` | Stair arch with its neon frame | 1676, 796 | 220 x 340 | Neon flicker |
+| `RingLight1` | Near magenta ceiling ring | 1056, 112 | 152 x 72 | Slow pulse |
+| `RingLight2` | Far magenta ceiling ring | 1376, 418 | 100 x 44 | Slow pulse |
+| `CageLight1` | Top caged lamp and its cone | 2080, 200 | 300 x 300 | Flicker |
+| `CageLight2` | Middle caged lamp and cone | 2060, 488 | 190 x 212 | Flicker |
+| `CageLight3` | Small far caged lamp and cone | 2036, 672 | 160 x 140 | Flicker |
+| `TubeLight1` | Teal tube under the first bracket | 660, 576 | 252 x 100 | Buzz flicker |
+| `TubeLight2` | Magenta tube under the second bracket | 1100, 722 | 148 x 66 | Buzz flicker |
+| `TubeLight3` | Small teal tube, third bracket | 1360, 812 | 64 x 34 | Buzz flicker |
+| `FloorFog` | Fog band along the back of the floor | 0, 1080 | 2040 x 300 | Drifting fog, drawn over the actors |
 
+Floor reflections need no slot of their own: use the `WalkArea` shape.
 ## Boundaries (measured)
 
 Floor, five column bases, bench, two exit zones, depth rule. Values and method are in `SUBWAY_BOUNDARIES.md`.
